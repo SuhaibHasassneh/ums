@@ -8,7 +8,7 @@ import cloudinary from '../../utils/cloudinary.js';
 
 const router = Router();
 
-router.get('/',auth(),async(req,res)=>{
+router.get('/',async(req,res)=>{
 
     const users = await UserModel.findAll({
         attributes:['id','userName','email']
